@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+  <style>
+    .active{
+        color:red;
+      }
+  </style>
+<body>
+    <div id="app">
+      <ul>
+          <li :class="{ active:index==isActive }" @click="changeValue(index)" 
+          v-for="( movies , index ) in movies">{{movies}}</li>
+      </ul>
+      <nav-bar :style></nav-bar>
+    </div>
+    <script>
+        const vm=new Vue({
+           el:'#app',
+           data:{
+            movies:['蓝精灵','火影忍者','海贼王','进击的巨人'],
+            isActive:false,
+           },
+           methods:{
+            changeValue(index){
+              this.isActive=index;
+              }
+           }
+        });
+    </script>
+</body>
+
+</html>

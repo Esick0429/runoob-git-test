@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <!-- 事件调用的方法没有参数 -->
+        <button @click="btn1Click()">按钮1</button>
+        <button @click="btn1Click">按钮1</button>
+
+        <button @click="btn2Click(123)">按钮2</button>
+        <button @click="btn2Click()">按钮3</button>
+        <button @click="btn2Click">按钮4</button>
+
+        <!-- 方法定义时，我们需要event对象又需要形参 -->
+        <!-- 在调用方法是，如何手动获取到浏览器参数的event对象： $event -->
+        <button @click="btn3Click(abc,$event)">按钮4</button>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                // event:'codewhy'
+                abc:123,
+            },
+            methods:{
+                btn1Click(){
+                    console.log("btn1Click");
+                },
+                btn2Click(abc){
+                    console.log("==========",abc)
+                },
+                btn3Click(abc,event){
+                    console.log("======", abc ,event)
+                }
+            },
+        })
+    </script>
+</body>
+</html>

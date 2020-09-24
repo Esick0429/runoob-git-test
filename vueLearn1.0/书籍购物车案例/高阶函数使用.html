@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+let vam = [20,30,40,50,60]
+
+let total = vam.filter(function(n){
+    return n<40
+}).map(function(n){
+    return n*2
+}).reduce(function(total,n){
+    return total + n
+},0)
+
+console.log(total)
+</script>
+</html>

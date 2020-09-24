@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+
+    </title>
+    <style>
+        .active{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in arr" :class="{active: currentIndex === index}" @click="liclick(index)">{{index}}.{{item}}</li>
+        </ul>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                arr:['海王','超人','赛尔号','奥拉星'],
+                currentIndex:0,
+            },
+            methods:{
+                liclick(index){
+                    this.currentIndex = index
+                }
+            },
+        })
+    </script>
+</body>
+</html>

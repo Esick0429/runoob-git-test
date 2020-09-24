@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<style>
+  .title{
+    font-size: 50px;
+  }
+</style>
+<body>
+    <div id="app">
+      <!-- <h2 :style="{key(属性名): value(属性值)}">{{message}}</h2> -->
+      <h2 :style="{fontSize: fianlSize+'px',color: 'red'}">{{message}}</h2>
+      <h2 :style="getStyles()">{{message}}</h2>
+    </div>
+    <script>
+        const vm=new Vue({
+           el:'#app',
+           data:{
+             message:'1122',
+             fianlSize:100,
+             fianlColor:"red"
+           },
+           methods:{
+             getStyles :function(){
+               return {fontSize: this.fianlSize+'px',color: this.fianlColor}
+             }
+           }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <cpn v-bind:cmoives="movies" v-bind:cmessage="message">
+        </cpn>
+    </div>
+
+
+
+    <template id="cpn">
+        <div>
+        <p>{{cmoives}}</p>
+        <h2>{{cmessage}}</h2>
+        </div>
+    </template>
+
+
+    
+    <script src="../js/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                movies:['sss','sssswww','wqeqweqweq'],
+                message:"杀杀杀",
+            },
+            methods:{
+            },
+            components:{
+                cpn:{
+                    props:['cmoives','cmessage'],
+                    data(){
+                        return{
+
+                        }
+                },
+                
+                template:"#cpn",
+                }
+            }
+        })
+    </script>
+</body>
+</html>

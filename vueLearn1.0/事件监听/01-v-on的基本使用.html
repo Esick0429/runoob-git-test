@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <h2>{{counter}}</h2>
+        <!-- <button v-on:click="add">+</button>
+        <button v-on:click="sad">-</button> -->
+        <button @click="add">
+            +
+        </button>
+        <button @click="sad">
+            -
+        </button>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                counter: 0
+            },
+            methods:{
+                add(){
+                    this.counter++
+                },
+                sad(){
+                    this.counter--
+                }
+            },
+        })
+    </script>
+</body>
+</html>

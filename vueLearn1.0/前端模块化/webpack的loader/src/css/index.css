@@ -1,0 +1,12 @@
+body{
+    /* background-color: red; */
+    background: url(../image/2.jpg) no-repeat;
+}
+div{
+    height: 40rem;
+    width: 50rem;
+    position: absolute;
+    right: 0px;
+    border: 1px solid red;
+    background-color: #fff;
+}

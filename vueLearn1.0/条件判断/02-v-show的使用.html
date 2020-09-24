@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-show适用于频繁切换-->
+        <div v-if="isShow">{{message}}</div>
+        <div v-show="isShow">{{message}}</div>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                message:"你好啊",
+                isShow:true
+            },
+            methods:{
+            },
+        })
+    </script>
+</body>
+</html>

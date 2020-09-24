@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <cpn><template class="topleft" v-slot:left></template><template class="topcenter" v-slot:center>Hello World!</template><template class="topright" v-slot:right></template></cpn>
+    </div>
+    <template id="cpn">
+        <div>
+            <slot name="left"><span>左</span></slot>
+            <slot name="center"><span>中</span></slot>
+            <slot name="right"><span>右</span></slot>
+        </div>
+    </template>
+    <script src="../js/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+            },
+            methods:{
+                btnClick(){
+                    console.log("123")
+                }
+            },
+            components:{
+                cpn:{
+                    template:"#cpn"
+                }
+            },
+        })
+    </script>
+</body>
+</html>

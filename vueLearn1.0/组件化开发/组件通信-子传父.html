@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <cpn @counter="cpnClick"></cpn>
+        <cpn @counter="cpnClick"></cpn>
+    </div>
+
+    <template id="cpn">
+        <div>
+            <button @click="add(counter)">+</button>
+            {{counter}}
+            <button @click="cut(counter)">-</button>
+            <h2>当前计数{{counter}}</h2>
+            <!-- <button v-for="item in categories" @click="btnclick(item)">{{item.name}}</button> -->
+        </div>
+    </template>
+    <script src="../js/vue.js"></script>
+    <script>
+        const cpn = {
+            template:'#cpn',
+            data(){
+                return{
+                    categories:[
+                        {id:'aaa',name:'热门推荐'},
+                        {id:'bbb',name:'手机数码'},
+                        {id:'ccc',name:'家用家电'},
+                        {id:'ddd',name:'电脑办公'},
+                    ],
+                    counter:0
+                }
+            },
+            methods:{
+                btnclick(item){
+                    this.$emit('itemclick',item)
+                },
+                add(counter){
+                    this.counter++,
+                    this.$emit('counter',counter)
+                },
+                cut(counter){
+                    this.counter--,
+                    this.$emit('counter',counter-1)
+                }
+
+            }
+        }
+
+
+
+        let vm = new Vue({
+            el:"#app",
+            data:{
+            },
+            methods:{
+                cpnClick(counter){
+                    console.log('cpnClick',counter)
+                }
+            },
+            components:{
+                cpn
+            }
+        })
+    </script>
+</body>
+</html>
