@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+      <a href="" @dblclick="prev" v-show="index!=0"><</a>
+      <img :src="imgArr[index]" alt="">        
+      <a href="#" @click="next" v-show="index<imgArr.length-1"> > </a>
+    </div>
+    <script>
+        const vm=new Vue({
+           el:'#app',
+           data:{
+            imgArr:[
+              "images/enjoy.png",
+              "images/gif.png",
+              "images/enjoy.png",
+              "images/gif.png",
+              "images/enjoy.png",
+              "images/gif.png",
+            ],
+            index:0
+           },
+           methods:{
+             prev:function(){
+              this.index--;
+              console.log(this.imgArr)
+             },
+             next:function(){
+              this.index++;
+              console.log(this.imgArr)
+             }
+           }
+        });
+    </script>
+</body>
+
+</html>

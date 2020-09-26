@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+      <input type="button" @click="show" value="切换">
+      <p v-if="isShow">I am p</p>
+      <p v-show="isShow">I am ps</p>
+      <h2 v-if="wd>=35">热死了</h2>
+    </div>
+    <script>
+        const vm=new Vue({
+           el:'#app',
+           data:{
+             isShow:false,
+             wd:40
+           },
+           methods:{
+             show:function(){
+               this.isShow = !this.isShow
+             }
+           }
+        });
+    </script>
+</body>
+
+</html>

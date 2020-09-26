@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <input type="button" value="get请求" class="get" @click="getJoke">
+  <p>{{ joke }}</p>
+</div>
+<script>
+
+    var app = new Vue({
+        el:"#app",
+        data:{
+            joke:"很好笑的笑话"
+        },
+        methods:{
+            getJoke:function(){
+                console.log(this.joke);
+                var that = this;
+                axios.get("https://autumnfish.cn/api/joke").then
+                (function(response){
+                    // console.log(response)
+                    console.log(response.data);
+                    // console.log(this.joke);
+                    that.joke = response.data;
+                },function(err){})
+            }
+        },
+    })
+
+
+</script>
+
+</body>
+</html>

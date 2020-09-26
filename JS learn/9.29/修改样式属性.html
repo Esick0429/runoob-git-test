@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+        div img{
+            display: block;
+        }
+        p{
+            position: absolute;
+            top: -10px;
+            left: 170px;
+            border: 1px solid #fff;
+            background: #fff;
+            width:15px;
+            height: 15px;
+            text-align: center;
+            font-size:6px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/5.png" alt="">
+        <p>X</p>
+    </div>
+    <script>
+        var div = document.querySelector('div');
+        var img = document.querySelector('img');
+        var p = document.querySelector('p');
+        div.onclick=function(){
+
+            img.style.display="none";
+            p.style.display="none";
+        }
+    </script>
+</body>
+</html>

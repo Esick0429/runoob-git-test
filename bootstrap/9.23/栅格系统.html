@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        [class^="col"]{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+            <div class="col-lg-3">s</div>
+            <div class="col-lg-3">s</div>
+            <div class="col-lg-3">s</div>
+            <div class="col-lg-3">s</div>
+        </div>
+        <!-- 如果子容器的份数相加等于12，则子容器能占满整个container的宽度 -->
+        <div class="row">
+                <div class="col-lg-6">s</div>
+                <div class="col-lg-2">s</div>
+                <div class="col-lg-2">s</div>
+                <div class="col-lg-2">s</div>
+        </div>
+        <!-- 如果子容器的份数相加小于12，则子容器不能占满整个container的宽度 会留白-->
+        <div class="row">
+                <div class="col-lg-6">s</div>
+                <div class="col-lg-2">s</div>
+                <div class="col-lg-2">s</div>
+                <div class="col-lg-1">s</div>
+        </div>
+        <!-- 如果子容器的份数相加大于12，多余的那一列则会另起一行显示-->
+        <div class="row">
+                <div class="col-lg-6">s</div>
+                <div class="col-lg-2">s</div>
+                <div class="col-lg-2">s</div>
+                <div class="col-lg-3">s</div>
+        </div>
+    </div>
+   <!-- <div class="container-fluid">123</div> -->
+</body>
+</html>

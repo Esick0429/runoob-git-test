@@ -22,6 +22,11 @@ require('./image/2.jpg');
 import Vue from 'vue'
 const app = new Vue({
     el:'#app',
+    template:`
+    <div>
+     <h2>{{message}}</h2>
+    </div>
+    `,
     data:{
         message:"Hello Webpack"
     }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Bootstrap 实例 - 响应式实用工具</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        ul{
+           list-style: none; 
+        }
+        .container{
+            width: 750px;
+            background:pink;
+            margin: 0 auto;
+        }
+       .container ul li{
+           float: left;
+           width:93.75px;
+           height: 30px;
+           background:green;
+       }
+       @media screen and (max-width: 767px) {
+          .container{ width: 100%;}
+          .container ul li{ width: 33.33%;}
+       }
+    </style>  
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+        </ul>
+    </div>
+
+</body>

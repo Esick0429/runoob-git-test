@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        .row>div{
+            height: 50px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <!-- 列嵌套注意加row，可取消父级元素的padding值，并且继承高度 -->
+                    <div class="col-md-6">a</div>
+                    <div class="col-md-6">b</div>
+            </div>
+        </div>
+        <div class="col-md-4">s</div>
+        <div class="col-md-4">s</div>
+    </div>
+    </div>
+    
+</body>
+</html>

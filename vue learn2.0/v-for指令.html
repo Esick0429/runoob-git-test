@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="添加数据" @click="add">
+    <input type="button" value="删除数据" @click="remove">
+  <ul>
+      <li v-for="(it,index) in arr">{{index+1}}{{ss+' '+it}}</li>
+  </ul>
+  <h2 v-for="item in vegetbles" v-bind:title="item.name">{{item.name}}</h2>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    arr:[1,2,3,4,5],
+    ss:"Hello the world",
+    vegetbles:[
+        {name:"kobe"},
+        {name:"hadeng"}
+    ]
+  },
+  methods:{
+      add:function(){
+          this.vegetbles.push({ name: "kuli"});
+      },
+      remove:function(){
+          this.vegetbles.shift();
+      }
+  }
+})
+</script>
+</body>
+</html>

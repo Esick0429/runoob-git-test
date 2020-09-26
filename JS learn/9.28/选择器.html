@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="first" ></div>
+    <input type="button" value="ss" id="xs1" onclick="ss()">
+    <input type="button" value="xx" id="xs2" onclick="xx()">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <script>
+            var box=document.getElementById("first");
+            box.style.color="blue";
+            box.style.background="#ccc";
+            box.style.width="100px";
+            box.style.height="100px";
+            
+            var block=document.getElementById("xs")
+            function ss(){
+                box.style.display="none";
+            }
+            function xx(){
+                box.style.display="block";
+            }
+        
+            var btn2=document.getElementsByTagName('input');
+            console.log(btn2);
+            console.log(btn2[0]);
+
+            // 依次打印元素对象可采取遍历
+            for (var i=0;i<btn2.length;i++){
+                console.log(btn2[i])
+            }
+
+            var btn3=document.getElementsByClassName('box');
+            console.log(btn3);
+
+            var btn4=document.querySelector('.box');
+            console.log(btn4);
+
+            var btn5=document.querySelectorAll('.box');
+            console.log(btn5);
+
+
+            var bodyEle=document.body;
+            console.log(bodyEle);
+            
+            var htmlEle = document.documentElement;
+            console.log(htmlEle);
+            
+        </script>
+</body>
+
+</html>

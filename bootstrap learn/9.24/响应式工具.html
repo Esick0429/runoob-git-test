@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <style>
+        .row div:nth-child(3){
+            background:pink;
+        }
+        span{
+            font-size: 50px;
+            color: #fff；
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                <span class="visible-lg">那是真的🐂批</span>
+            </div>
+            <div class="col-xs-3">2</div>
+            <div class="col-xs-3 hidden-md hidden-xs">333</div>
+            <div class="col-xs-3">4</div>
+        </div>
+    </div>
+    <button onclick="setTimeout(myFunction, 3000)" class="btn">压谁</button>
+</body>
+<script>
+    
+var string = "兔子,大舅";   //原始数据
+var array = string.split(",");           //转化为数组
+var value = array[Math.round(Math.random()*(array.length-1))];  //随机抽取一个值
+function myFunction() {
+        console.log(value);
+ }
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+      <input type="button" v-on:click="dolt" value="单机"></input>
+      <input type="button" @click="dolt" value="单机"></input>
+      <input type="button" @dblclick="dolt" value="单机">
+      <h2 @click="changeFood">{{food}}</h2>
+    </div>
+    <script>
+        const vm=new Vue({
+           el:'#app',
+           data:{
+            food:"卢本伟牛皮"
+           },
+           methods:{
+             dolt:function(){
+              alert("111");
+             },
+             changeFood:function(){
+               console.log(this.food);
+               this.food+="好好吃"
+             }
+           }
+        });
+    </script>
+</body>
+
+</html>
