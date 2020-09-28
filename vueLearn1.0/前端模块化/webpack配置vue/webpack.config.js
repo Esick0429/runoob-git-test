@@ -1,5 +1,5 @@
 const path = require('path')
-
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
     //指定入口，表示webpack要打包哪个文件
     entry: path.join(__dirname,'./src/main.js'),
@@ -18,7 +18,7 @@ module.exports = {
             loader: "style-loader" // creates style nodes from JS strings
         }, {
             loader: "css-loader" // translates CSS into CommonJS
-        }]
+        },]
         },
         {
           test: /\.less$/,
@@ -51,13 +51,21 @@ module.exports = {
               presets: ['@babel/preset-env']
             }
           }
+        },
+        {
+          test:/\.vue$/,
+          use: ['vue-loader']
         }
-  ]
+      ]
     },
     resolve:{
       alias:{
         'vue$':'vue/dist/vue.esm.js'
       }
-    }
+    },
+    plugins: [
+      // 请确保引入这个插件！
+      new VueLoaderPlugin()
+    ]
 }
 
