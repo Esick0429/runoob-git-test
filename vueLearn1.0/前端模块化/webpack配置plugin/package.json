@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "webpackrun": "webpack -v"
+    "webpackrun": "webpack -v",
+    "dev": "webpack-dev-server --open"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +24,8 @@
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "@babel/preset-env": "^7.11.5",
